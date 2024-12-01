@@ -1,17 +1,91 @@
+---
+
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Portfolio</title>
+		<!-- ===== CSS Files ===== -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="stylesheet" href="css/skins/color-1.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+		<!-- ===== Style Switcher ===== -->
+		<link
+			rel="stylesheet"
+			href="css/skins/color-1.css"
+			class="alternate-style"
+			title="color-1"
+			type="text/css"
+			media="none" onload="if(media!='all')media='all'"
+		/>
+		<link
+			rel="stylesheet"
+			href="css/skins/color-2.css"
+			class="alternate-style"
+			title="color-2"
+			type="text/css"
+		/>
+		<link
+			rel="stylesheet"
+			href="css/skins/color-3.css"
+			class="alternate-style"
+			title="color-3"
+			type="text/css"
+		/>
+		<link
+			rel="stylesheet"
+			href="css/skins/color-4.css"
+			class="alternate-style"
+			title="color-4"
+			type="text/css"
+		/>
+		<link
+			rel="stylesheet"
+			href="css/skins/color-5.css"
+			class="alternate-style"
+			title="color-5"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="css/style-switcher.css" />
 	</head>
 	<body>
 		<slot />
+		<!-- ===== Style Switcher Start ===== -->
+		<div class="style-switcher">
+			<div class="style-switcher-toggler s-icon">
+				<i class="fas fa-cog fa-spin"></i>
+			</div>
+			<div class="day-night s-icon">
+				<i class="fas"></i>
+			</div>
+			<h4>Temas de Colores</h4>
+			<div class="colors">
+				<span class="color-1" onclick="setActiveStyle('color-1')"
+				></span>
+				<span class="color-2" onclick="setActiveStyle('color-2')"
+				></span>
+				<span class="color-3" onclick="setActiveStyle('color-3')"
+				></span>
+				<span class="color-4" onclick="setActiveStyle('color-4')"
+				></span>
+				<span class="color-5" onclick="setActiveStyle('color-5')"
+				></span>
+			</div>
+		</div>
+		<!-- ===== Style Switcher End ===== -->
+		<!-- ===== JS Files ===== -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+			referrerpolicy="no-referrer"></script>
+		<script src="../js/script.js"></script>
+		<script src="../js/style-switcher.js"></script>
 	</body>
 </html>
-
 <style>
 	html,
 	body {
